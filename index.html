@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>rasta ka mal sasta</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div class="container my-5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>sno</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>image</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            data = [
+    {
+        name : "Infinix",
+        price : 80000,
+        image : "https://lahorecentre.com/wp-content/uploads/2024/04/93-450x450.jpg"
+    },
+    {
+        name : "Tecno",
+        price : 25000,
+        image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv2H7Rl_fLS7el2SULyszgU63llX0nV_lb7SaYf44FMA&s"
+    },
+    {
+        name : "One Plus",
+        price : 100000,
+        image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJm_gfGmGGyj7MfYqzqQn4MKFHhT4cMXCi-ACpqy5WYA&s"
+    },
+    {
+        name : "oppo",
+        price : 40000,
+        image : "https://www.pakmobizone.pk/wp-content/uploads/2022/03/Oppo-A16e-Midnight-Black-3.jpg"
+    },
+    {
+        name : "Itel",
+        price : 4499 ,
+        image : "https://cubeonline.pk/cdn/shop/files/ProductforWeb-9_1_1024x1024.png?v=1705469986"
+    },
+]
+
+function update(){
+    var str = '';
+data.forEach(function(data , index){
+    str = str + `
+                    <tr>
+                        <td>${index+1}</td>
+                        <td>${data.name}</td>
+                        <td>${data.price}</td>
+                        <td><img style= "height : 60px" src=${data.image}></td>
+                    </tr>
+    
+    `
+})
+document.getElementById("tbody").innerHTML = str;
+
+}
+
+update()
+
+        </script>
+    </body>
+</html>
